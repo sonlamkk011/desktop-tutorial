@@ -1,15 +1,30 @@
 #include<stdio.h>
 int main(){
-	int a,b,ucln;
-	printf("Nhap a:");
-	scanf("%d",&a);
-	printf("Nhap b:");
-	scanf("%d",&b);
-	for (int i=1;i<=a || i<=b;i++){
-		if(a%i==0 && b%i==0){
-			ucln=i;
+	int n;
+	int a[100];
+	printf("Nhap n:");
+	scanf("%d",&n);
+	for(int i=0;i<n;i++){
+		printf("Nhap phan tu thu a[%d]: ",i);
+		scanf("%d",&a[i]);
+		}
+	int max=0;
+	int dem=0;
+	for(int i=0;i<n;i++)
+	{
+		if(a[i]>0)
+		{
+			dem++;
+				if(dem>max)
+				{
+					max=dem;
+				}	
+			
+		}
+		else
+		{	
+           dem=0;
 		}
 	}
-	printf("Uoc chung lon nhat cua a va b la: %d",ucln);
-	return 0;
-}
+	printf("So luong cac so duong lien tiep nhau nhieu nhat la: %d",dem);
+	}	

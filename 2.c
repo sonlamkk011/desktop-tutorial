@@ -1,14 +1,18 @@
 #include<stdio.h>
 int main(){
 	int n;
-	printf("Nhap n: ");
+	int a[100];
+	printf("Nhap n:");
 	scanf("%d",&n);
-	int sum=0;
-	printf("Cac uoc cua n la: ");
-	for(int i=1;i<=n;i++){
-		if(n%i==0){
-			printf("%d ",i);
-			sum+=i;
+	for(int i=0;i<n;i++){
+		printf("Nhap phan tu thu a[%d]: ",i);
+		scanf("%d",&a[i]);
 		}
-	}printf("\nTong cac uoc la: %d",sum);
-}
+	int min=a[0];
+	for(int i=0;i<n;i++){
+		if(min>a[i] && a[i]>0){
+			min=a[i];
+		}
+	}
+	printf("Phan tu duong nho nhat trong mang la: %d",min);
+	return 0;}
